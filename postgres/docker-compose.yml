@@ -1,0 +1,16 @@
+version: '3'
+services:
+    database:
+        container_name: postgres
+        image: 'postgres:14.5'
+        # extra_hosts: [ 'host.docker.internal:host-gateway' ]
+        restart: always
+        environment:
+            POSTGRES_USER: gisa
+            POSTGRES_PASSWORD: gisa#puc
+            POSTGRES_DB: gisadb
+        volumes:
+            #- ./config/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+            - ./local-data:/var/lib/postgresql/data
+        ports:
+            - 5432:5432
