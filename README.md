@@ -17,6 +17,10 @@
 - Clicar em Import novamente
 - Selecionar o arquivo [postman/Local.postman_environment.json](postman/Local.postman_environment.json)
 
+## Aplicações
+- Inicializar o [gisa-info-cadastro](/puc-gisa/gisa-info-cadastro)
+- Inicializar o [integracao-boa-saude](/puc-gisa/integracao-boa-saude)
+
 
 
 
