@@ -11,5 +11,12 @@
 - Selecionar o arquivo [rabbitMQ/rabbit_gisa_2023-3-23.json](rabbitMQ/rabbit_gisa_2023-3-23.json)
 - Clicar em Upload broker definitions
 
+## Postman
+- Clicar em Import 
+- Selecionar o arquivo [postman/GISA.postman_collection.json](postman/GISA.postman_collection.json)
+- Clicar em Import novamente
+- Selecionar o arquivo [postman/Local.postman_environment.json](postman/Local.postman_environment.json)
+
+
 
 
