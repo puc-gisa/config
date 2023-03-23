@@ -1,0 +1,434 @@
+{
+	"info": {
+		"_postman_id": "baa592fd-2a23-47ac-a8ee-c202a34d6f96",
+		"name": "GISA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8644426"
+	},
+	"item": [
+		{
+			"name": "Informações Cadastrais",
+			"item": [
+				{
+					"name": "actuator",
+					"item": [
+						{
+							"name": "Health",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{info-cadastro}}/health",
+									"host": [
+										"{{info-cadastro}}"
+									],
+									"path": [
+										"health"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Info",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{info-cadastro}}/info",
+									"host": [
+										"{{info-cadastro}}"
+									],
+									"path": [
+										"info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Metrics",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{info-cadastro}}/metrics/hikaricp.connections",
+									"host": [
+										"{{info-cadastro}}"
+									],
+									"path": [
+										"metrics",
+										"hikaricp.connections"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Metrics Jdbc",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{info-cadastro}}/metrics/jdbc.connections.max",
+									"host": [
+										"{{info-cadastro}}"
+									],
+									"path": [
+										"metrics",
+										"jdbc.connections.max"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "associado",
+					"item": [
+						{
+							"name": "Busca Associado",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{info-cadastro}}/associados/14",
+									"host": [
+										"{{info-cadastro}}"
+									],
+									"path": [
+										"associados",
+										"14"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Lista Associados",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{info-cadastro}}/associados",
+									"host": [
+										"{{info-cadastro}}"
+									],
+									"path": [
+										"associados"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cadastra Novo Associado",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"John Doe\",\n    \"email\": \"johndoe35@gmail.com\",\n    \"dataNascimento\": \"31/12/2000\",\n    \"cpf\": \"11111111135\",\n    \"endereco\": {\n        \"logradouro\": \"Av. 9 de Julho\",\n        \"numero\": \"1650\",\n        \"bairro\": \"Parque do Colégio\",\n        \"cidade\": \"Jundiaí\",\n        \"estado\": \"SP\",\n        \"cep\": \"13208056\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{info-cadastro}}/associados/",
+									"host": [
+										"{{info-cadastro}}"
+									],
+									"path": [
+										"associados",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Atualiza Associado",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"John Doe\",\n    \"dataNascimento\": \"31/12/2000\",\n    \"endereco\": {\n        \"logradouro\": \"Av. 9 de Julho\",\n        \"numero\": \"1652\",\n        \"complemento\": \"Apto 100\",\n        \"bairro\": \"Parque do Colégio\",\n        \"cidade\": \"Jundiaí\",\n        \"estado\": \"SP\",\n        \"cep\": \"13208056\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{info-cadastro}}/associados/14",
+									"host": [
+										"{{info-cadastro}}"
+									],
+									"path": [
+										"associados",
+										"14"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cadastra Novo Associado - Incompleto",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"John Doe\",\n    \"email\" : \"johndoe2@gmail.com\",\n    \"dataNascimento\": \"31/12/2025\",\n    \"cpf\": \"11111111112\", \n     \"endereco\": {\n        \"logradouro\": \"Av. 9 de Julho\",\n        \"complemento\": \"Apto 100\",\n        \"bairro\": \"Parque do Colégio\",\n        \"cidade\": \"Jundiaí\",\n        \"estado\": \"SPSP\",\n        \"cep\": \"ABC\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/associados/",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"associados",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "planos",
+					"item": [
+						{
+							"name": "Lista Planos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{info-cadastro}}/tipo-plano/",
+									"host": [
+										"{{info-cadastro}}"
+									],
+									"path": [
+										"tipo-plano",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "vinculo",
+					"item": [
+						{
+							"name": "Associa plano",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"idAssociado\": 1,\n    \"codigoTipoPlano\": 3\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{info-cadastro}}/vinculo-plano/",
+									"host": [
+										"{{info-cadastro}}"
+									],
+									"path": [
+										"vinculo-plano",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Busca plano do associado",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{info-cadastro}}/vinculo-plano/14",
+									"host": [
+										"{{info-cadastro}}"
+									],
+									"path": [
+										"vinculo-plano",
+										"14"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "autorizacao-exame",
+					"item": [
+						{
+							"name": "Solicita Autorização para exame",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n     \"idAssociado\": 1,\n     \"codigoExame\": \"ABC-101\",\n     \"dataExame\": \"25/03/2023\",\n     \"crmMedicoSolicitante\" : \"213-SP\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{info-cadastro}}/autorizacao-exame/",
+									"host": [
+										"{{info-cadastro}}"
+									],
+									"path": [
+										"autorizacao-exame",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Lista Solicitações do Associado",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{info-cadastro}}/autorizacao-exame/associado/1",
+									"host": [
+										"{{info-cadastro}}"
+									],
+									"path": [
+										"autorizacao-exame",
+										"associado",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Busca Solicitação por codigo",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{info-cadastro}}/autorizacao-exame/1",
+									"host": [
+										"{{info-cadastro}}"
+									],
+									"path": [
+										"autorizacao-exame",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Integração Boa Saude",
+			"item": [
+				{
+					"name": "actuator",
+					"item": [
+						{
+							"name": "Health",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{integracao-boa-saude}}/health",
+									"host": [
+										"{{integracao-boa-saude}}"
+									],
+									"path": [
+										"health"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Info",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{integracao-boa-saude}}/info",
+									"host": [
+										"{{integracao-boa-saude}}"
+									],
+									"path": [
+										"info"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Metrics",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{integracao-boa-saude}}/metrics/",
+									"host": [
+										"{{integracao-boa-saude}}"
+									],
+									"path": [
+										"metrics",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Metrics Jdbc",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{integracao-boa-saude}}/metrics/system.load.average.1m",
+									"host": [
+										"{{integracao-boa-saude}}"
+									],
+									"path": [
+										"metrics",
+										"system.load.average.1m"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
