@@ -18,9 +18,8 @@
 - Selecionar o arquivo [postman/Local.postman_environment.json](postman/Local.postman_environment.json)
 
 ## Aplicações
-- Inicializar o [gisa-info-cadastro](/puc-gisa/gisa-info-cadastro)
-- Inicializar o [integracao-boa-saude](/puc-gisa/integracao-boa-saude)
+- Inicializar o [gisa-info-cadastro](https://github.com/puc-gisa/gisa-info-cadastro)
+- Inicializar o [integracao-boa-saude](https://github.com/puc-gisa/integracao-boa-saude)
 
-
-
-
+## Teste
+- Utilizar os endpoints configurados no postman
