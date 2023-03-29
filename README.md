@@ -1,8 +1,7 @@
-# Setup
+# GISA - Configurações
 
 ## DB
 - Inicializar o postgres utilizando o [docker-compose](postgres/docker-compose.yml)
-
 
 ## MQ
 - Inicializar o rabbitMQ utilzando o [docker-compose](rabbitMQ/docker-compose.yml)
